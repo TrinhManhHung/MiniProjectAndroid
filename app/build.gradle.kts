@@ -3,13 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.miniproject"
-    compileSdk {
-        version = release(36)
-    }
+    namespace = "com.example.miniproject02"
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.miniproject"
+        applicationId = "com.example.miniproject02"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -38,6 +36,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+
+    // Room components
+    implementation(libs.ckout room.runtime)
+    annotationProcessor(libs.room.compiler)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
